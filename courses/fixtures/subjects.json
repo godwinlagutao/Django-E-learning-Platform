@@ -1,0 +1,49 @@
+[
+{
+  "model": "courses.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Mathematics",
+    "slug": "mathematics"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "owner": 1,
+    "subject": 1,
+    "title": "Mathematics",
+    "slug": "mathematics",
+    "overview": "Algebra, Quadratic Equations, Differentiation and Integration",
+    "created": "2024-10-07T22:40:02.970Z"
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "title": "Title for Module 1",
+    "description": "Description for Module 1"
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "course": 1,
+    "title": "Title for Module 2",
+    "description": "Description for Module 2"
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 3,
+  "fields": {
+    "course": 1,
+    "title": "Title for Module 3",
+    "description": "Description for Module 3"
+  }
+}
+]
