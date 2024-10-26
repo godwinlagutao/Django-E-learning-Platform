@@ -7,3 +7,9 @@ ModuleFormSet = inlineformset_factory(Course,
                                       fields = ['title', 'description'],
                                       extra=2,
                                       can_delete=True)
+
+
+'''
+Username: eduTestUser123
+Password: Pass@word456!
+'''
