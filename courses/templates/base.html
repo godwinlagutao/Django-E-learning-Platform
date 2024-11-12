@@ -5,15 +5,44 @@
     <meta charset="utf-8" />
     <title>{% block title %}Educa{% endblock %}</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <style>
+        /* Inline CSS for menu styling */
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px; /* space between items */
+            align-items: center; /* vertically center align */
+        }
+        .menu li {
+            display: inline;
+        }
+        .menu form {
+            display: inline;
+        }
+        .menu button {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div id="header">
         <a href="/" class="logo">Educa</a>
         <ul class="menu">
             {% if request.user.is_authenticated %}
-                <li><a href="{% url 'logout' %}">Sign out</a></li>
+                <li>
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
             {% else %}
-                <li><a href="{% url 'login' %}">Sign in</a></li>
+                <li><a href="{% url 'login' %}">Log in</a></li>
+                <li><a href="{% url 'student_registration' %}">Sign in</a></li>
             {% endif %}
         </ul>
     </div>

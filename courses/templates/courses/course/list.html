@@ -19,6 +19,8 @@
 
     <div class="contents">
         <h3>Subjects</h3>
+        <a href="{% url "manage_course_list"%}">Manage Courses</a>
+        <br>
         <ul id="modules">
             <li {% if not subject %}class="selected"{% endif %}>
                 <a href="{% url "course_list" %}">All</a>
